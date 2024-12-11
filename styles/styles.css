@@ -1,0 +1,447 @@
+     /* General Reset and Font Styling */
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+     }
+
+     /* Navigation Bar */
+     nav {
+         width: 100%;
+         height: 60px;
+         line-height: 60px;
+         padding: 0 100px;
+         background-color: #2c2b30;
+         border-bottom: 1px solid #444d56;
+     }
+
+     nav .logo p {
+         font-size: 30px;
+         font-weight: bold;
+         float: left;
+         color: #ffcc00;
+         text-transform: uppercase;
+         letter-spacing: 1.5px;
+         cursor: pointer;
+     }
+
+     nav ul {
+         float: right;
+     }
+
+     nav li {
+         display: inline-block;
+         list-style: none;
+     }
+
+     nav li a {
+         font-size: 16px;
+         padding: 0 20px;
+         color: #ffffff;
+         text-decoration: none;
+         transition: color 0.3s ease;
+     }
+
+     nav li a:hover {
+        color: #ffcc00;
+     }
+
+     /* Intro Section */
+     .intro-section {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         height: 100vh;
+         background: linear-gradient(135deg, rgb(79 79 81), rgba(60, 60, 60, 0.9));
+         padding: 40px;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+         flex-wrap: wrap;
+         position: relative;
+     }
+
+     /* Inner Wrapper */
+     .inner-wrapper {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         gap: 40px;
+         max-width: 1200px;
+         text-align: center;
+     }
+
+     /* Left Side (Text) */
+     .left-side {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: left;
+         padding: 20px;
+     }
+
+     .left-side p {
+         font-size: 1.5rem;
+         font-weight: bold;
+         line-height: 1.5;
+         color: #fff;
+         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+         margin-bottom: 20px;
+     }
+
+     .highlight {
+         color: #ffcc00;
+         font-weight: bold;
+     }
+
+     /* Button Styles */
+     .button {
+         background-color: #ffcc00;
+         color: #333;
+         border: none;
+         padding: 12px 24px;
+         font-size: 1.2rem;
+         font-weight: bold;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         margin-top: 20px;
+     }
+
+     .button:hover {
+         background-color: #ffaa00;
+         transform: scale(1.1);
+         box-shadow: 0 4px 10px rgba(255, 170, 0, 0.5);
+     }
+
+     .button:active {
+         background-color: #e68a00;
+     }
+
+     /* Right Side (Profile Image) */
+     .right-side {
+         flex: 1;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .profile-image {
+         border-radius: 50%;
+         width: 250px;
+         height: 250px;
+         object-fit: cover;
+         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+     }
+
+     .profile-image:hover {
+         transform: scale(1.1);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+     }
+
+     /* Responsive Adjustments */
+     @media (max-width: 768px) {
+         .inner-wrapper {
+             flex-direction: column;
+             gap: 20px;
+         }
+
+         .left-side {
+             text-align: center;
+         }
+
+         .profile-image {
+             width: 200px;
+             height: 200px;
+         }
+     }
+
+
+     /* About Section */
+     .about-section {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         height: 100vh;
+         background: linear-gradient(135deg, rgb(44 43 48), rgba(60, 60, 60, 0.9));
+         color: #c9d1d9;
+         padding: 40px;
+         text-align: justify;
+         margin: 0 auto;
+         border-radius: 10px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+         font-family: 'Helvetica Neue', Arial, sans-serif;
+     }
+
+     .about-section h1 {
+         font-size: 4rem;
+         margin-bottom: 20px;
+         color: #ffcc00;
+
+     }
+
+     .about-section h2 {
+         font-size: 2.5rem;
+         margin-bottom: 30px;
+         color: #c9d1d9;
+     }
+
+     .about-section p {
+         font-size: 1.5rem;
+         line-height: 2;
+         margin-bottom: 20px;
+         max-width: 80%;
+     }
+
+     .about-section p:last-of-type {
+         margin-bottom: 0;
+     }
+
+
+     /* Portfolio Section */
+     .portfolio-section h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        color:#29282d;
+
+    }
+     .portfolio-section {
+         padding: 60px 20px;
+         text-align: center;
+     }
+
+     .portfolio-container {
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+         flex-wrap: wrap;
+     }
+
+     /* Portfolio Item Flip Effect */
+     .portfolio-item {
+         perspective: 1000px;
+         width: 500px;
+         height: 600px;
+         margin: 20px;
+     }
+
+     .portfolio-inner {
+         width: 100%;
+         height: 100%;
+         position: relative;
+         transform-style: preserve-3d;
+         transition: transform 0.6s;
+     }
+
+     .portfolio-item:hover .portfolio-inner {
+         transform: rotateY(180deg);
+     }
+
+     .portfolio-front,
+     .portfolio-back {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         backface-visibility: hidden;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+     }
+
+     /* Portfolio Section */
+     .portfolio-section {
+         padding: 60px 20px;
+         text-align: center;
+     }
+
+     .portfolio-container {
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+         flex-wrap: wrap;
+     }
+
+     /* Portfolio Item Flip Effect */
+     .portfolio-item {
+         perspective: 1000px;
+         width: 500px;
+         height: 600px;
+         margin: 20px;
+     }
+
+     .portfolio-inner {
+         width: 100%;
+         height: 100%;
+         position: relative;
+         transform-style: preserve-3d;
+         transition: transform 0.6s;
+     }
+
+     .portfolio-item:hover .portfolio-inner {
+         transform: rotateY(180deg);
+     }
+
+     .portfolio-front,
+     .portfolio-back {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         backface-visibility: hidden;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+     }
+
+     /* Front Side */
+     .portfolio-front {
+         background-color: #29282d;
+         ;
+         border-radius: 10px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         padding: 10px;
+         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+         color: #c9d1d9;
+     }
+
+     .portfolio-front img {
+         width: 100%;
+         height: auto;
+         border-radius: 5px;
+         object-fit: cover;
+     }
+
+     .portfolio-front h3 {
+         margin-top: 10px;
+         margin-bottom: 150px;
+         font-size: 30px;
+         text-align: center;
+         color: #ffcc00;
+     }
+
+     /* Back Side */
+     .portfolio-back {
+         background-color: #29282d;
+         ;
+         color: #c9d1d9;
+         transform: rotateY(180deg);
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         padding: 10px;
+         box-sizing: border-box;
+     }
+
+     .portfolio-back h3 {
+         margin-bottom: 10px;
+         color: #ffcc00;
+         font-size: 35px;
+     }
+
+     .portfolio-back p {
+         font-size: 30px;
+     }
+
+     /* Contact Section */
+     .contact-section {
+        background: linear-gradient(135deg, rgb(41 40 45), rgba(60, 60, 60, 0.9));
+         color: #c9d1d9;
+         padding: 60px 20px;
+         text-align: center;
+     }
+
+     .contact-section h2 {
+         font-size: 36px;
+         font-weight: bold;
+         color: #ffcc00;
+         margin-bottom: 20px;
+     }
+
+     .fa {
+         padding: 20px;
+         font-size: 30px;
+         width: 70px;
+         text-align: center;
+         text-decoration: none;
+         margin: 5px 2px;
+         border-radius: 50%;
+         transition: background-color 0.3s ease;
+     }
+
+     .fa:hover {
+         opacity: 0.8;
+     }
+
+     .fa-facebook {
+         background: #3B5998;
+         color: white;
+     }
+
+     .fa-google {
+         background: #dd4b39;
+         color: white;
+     }
+
+     .fa-linkedin {
+         background: #007bb5;
+         color: white;
+     }
+
+     .fa-github {
+         background: #000000;
+         color: white;
+     }
+
+     /* Footer Section */
+     footer {
+         width: 100%;
+         padding: 20px;
+         background-color: #161b22;
+         color: #c9d1d9;
+         text-align: center;
+         font-size: 14px;
+         border-top: 1px solid #444d56;
+     }
+
+     /* Inner Wrapper for Floats */
+.inner-wrapper {
+    display: block; /* Remove Flexbox for Float */
+    overflow: hidden; /* Clear floated elements */
+}
+
+/* Left Side (Text) */
+.left-side {
+    float: left; /* Float left */
+    width: 50%; /* Take half the container width */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width */
+    text-align: left;
+}
+
+/* Right Side (Profile Image) */
+.right-side {
+    float: right; /* Float right */
+    width: 50%; /* Take the other half */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .left-side,
+    .right-side {
+        float: none; /* Remove float for smaller screens */
+        width: 100%; /* Take full width */
+        text-align: center; /* Center text */
+    }
+}
